@@ -1,0 +1,307 @@
+.header {
+    margin: 20px 0;
+    h2 {
+        text-align: center;
+        color: var(--clr-grey);
+        padding: 10px;
+        font-size: 1.25em;
+    }
+    .output {
+        background-color: var(--clr-dark-grey);
+        display: flex;
+        gap: 10px;
+        padding: 15px;
+        justify-content: space-between;
+
+        p {
+            font-family: inherit;
+            font-size: 1.5em;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            padding: 0 15px;
+            font-weight: bold;
+            color: var(--clr-almost-white);
+            width: 85%;
+        }
+        .pass-generated {
+            word-wrap: break-word;
+        }
+        button {
+            padding: 3px;
+            border: none;
+            outline: none;
+            background-color: transparent;
+            width: 40px;
+            img {
+                min-width: 15px;
+            }
+        }
+    }
+}
+
+.container {
+    // padding: 15px;
+    font-weight: bold;
+    .card {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+        background-color: var(--clr-dark-grey);
+    }
+
+    p {
+        color: var(--clr-almost-white);
+        font-style: bold;
+    }
+
+    .slider {
+        &__top {
+            justify-content: space-between;
+            margin-bottom: 5px;
+
+            .length {
+                color: var(--clr-neon-green) !important;
+                font-size: 1.75rem;
+                p {
+                    color: inherit;
+                }
+            }
+        }
+
+        .slid-bar {
+            margin-top: 10px;
+            input {
+                width: 100%;
+            }
+        }
+    }
+    .checkboxes {
+        padding: 0px !important;
+        p {
+            font-size: 1em;
+        }
+
+        .check {
+            padding: 5px 5px 5px 0;
+
+            label {
+                margin-right: 10px;
+                padding: 0;
+                // border: 2px solid var(--clr-neon-green);
+            }
+            p {
+                font-size: 1.05rem;
+            }
+        }
+    }
+
+    .strength {
+        padding: 5px 10px;
+        background-color: var(--clr-very-dark-grey);
+        justify-content: space-between;
+
+        p {
+            color: var(--clr-grey);
+        }
+    }
+
+    .genBtn {
+        padding: 12px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+
+        font-weight: bolder;
+        font-family: inherit;
+        font-size: 1em;
+        border: 2px solid transparent;
+        outline: none;
+        background-color: var(--clr-neon-green);
+        transition: all 300ms ease-in-out;
+
+        img {
+            width: 10px;
+        }
+
+        &:hover,
+        &:active {
+            color: var(--clr-neon-green);
+            border: 2px solid var(--clr-neon-green);
+            background-color: transparent;
+
+            path {
+                fill: var(--clr-neon-green);
+            }
+        }
+    }
+}
+
+// Minimal styles
+
+.flex {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+}
+
+.bars {
+    gap: 5px;
+    padding: 5px 0;
+    p {
+        margin-right: 10px;
+    }
+    .bar {
+        border: 2px solid white;
+        height: 20px;
+        width: 5px;
+        padding: 2px;
+    }
+}
+
+button {
+    cursor: pointer;
+}
+
+.checkboxes .check input[type="checkbox"] {
+    // visibility: none;
+    // display: none;
+
+    label {
+        border: 2px solid var(--clr-neon-green) !important;
+    }
+
+    /* &:checked + label {
+        background-color: var(--clr-neon-green) !important;
+    } */
+}
+
+.form-control {
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 1.1;
+    display: grid;
+}
+input[type="checkbox"] {
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    margin: 0;
+
+    font: inherit;
+    width: 1em;
+    height: 1em;
+    border: 3px solid var(--clr-almost-white);
+
+    /* ...existing styles */
+    display: grid;
+    place-content: center;
+}
+
+input[type="checkbox"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--clr-neon-green);
+    transform-origin: bottom left;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+input[type="checkbox"]:checked::before {
+    transform: scale(1);
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    background-color: transparent;
+    appearance: none;
+    cursor: grabbing;
+}
+
+input[type="range"]:focus {
+    outline: none;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+    background: var(--clr-very-dark-grey);
+    height: 10px;
+    background-color: var(--clr-very-dark-grey);
+}
+
+input[type="range"]::-moz-range-track {
+    background: var(--clr-very-dark-grey);
+    height: 10px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    border: 2px solid var(--clr-almost-white);
+    background: var(--clr-neon-green);
+    margin-top: -5px;
+}
+
+.bars.too-weak {
+    .bar:nth-child(2) {
+        background-color: var(--clr-red);
+        border-color: var(--clr-red);
+    }
+}
+.bars.weak {
+    .bar:nth-child(2) {
+        background-color: var(--clr-orange);
+        border-color: var(--clr-orange);
+    }
+    .bar:nth-child(3) {
+        background-color: var(--clr-orange);
+        border-color: var(--clr-orange);
+    }
+}
+.bars.medium {
+    .bar:nth-child(2) {
+        background-color: var(--clr-yellow);
+        border-color: var(--clr-yellow);
+    }
+    .bar:nth-child(3) {
+        background-color: var(--clr-yellow);
+        border-color: var(--clr-yellow);
+    }
+    .bar:nth-child(4) {
+        background-color: var(--clr-yellow);
+        border-color: var(--clr-yellow);
+    }
+}
+.bars.strong {
+    .bar {
+        background-color: var(--clr-neon-green);
+        border-color: var(--clr-neon-green);
+    }
+}
+
+.bars {
+    position: relative;
+    transition: left 3s ease-in-out;
+    .tag {
+        position: absolute;
+        font-size: 1.25em;
+        color: white !important;
+        left: -95px;
+    }
+}
+#copy-btn {
+    position: relative;
+}
+.tag-1 {
+    position: absolute;
+    font-size: 1em !important;
+    color: var(--clr-neon-green) !important;
+    left: -70px;
+    top: 10px;
+}

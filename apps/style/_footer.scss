@@ -1,0 +1,15 @@
+footer {
+    margin-top: 50px;
+    font-family: inherit;
+    color: white;
+    font-size: 0.5em;
+
+    i {
+        scale: 1.45;
+        margin-left: 0.75em;
+        color: white;
+        &:hover {
+            scale: 1.75;
+        }
+    }
+}

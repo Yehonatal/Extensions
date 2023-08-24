@@ -1,0 +1,21 @@
+{
+    "name": "password",
+    "description": "Generates strong and secure passwords with varying levels of complexity. It allows users to select the length and composition of their password, and includes options for including or excluding certain characters.",
+    "version": "1.0.0",
+    "icons": {
+        "16": "assets/images/password.png",
+        "24": "assets/images/password.png",
+        "128": "assets/images/password.png"
+    },
+
+    "action": {
+        "default_icon": {
+            "16": "assets/images/password.png",
+            "24": "assets/images/password.png",
+            "128": "assets/images/password.png"
+        },
+        "default_title": "password",
+        "default_popup": "popup.html"
+    },
+    "manifest_version": 3
+}

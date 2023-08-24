@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link
+            rel="shortcut icon"
+            href="assets/images/icon-arrow-right.svg"
+            type="image/x-icon"
+        />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Password Generator</title>
+
+        <!-- Links -->
+        <link rel="stylesheet" href="apps/style/style.css" />
+        <script
+            src="https://kit.fontawesome.com/5b12988027.js"
+            crossorigin="anonymous"
+        ></script>
+    </head>
+    <body>
+        <main class="container">
+            <header class="header">
+                <h2>Password Generator</h2>
+                <div class="output" id="output">
+                    <p class="pass-generated">P4$5W0rD!"</p>
+
+                    <button id="copy-btn">
+                        <img src="assets/images/icon-copy.svg" alt="copy" />
+                        <p class="tag-1"></p>
+                    </button>
+                </div>
+            </header>
+            <div class="card">
+                <div class="slider">
+                    <div class="slider__top flex">
+                        <div>
+                            <p>Character Length</p>
+                        </div>
+                        <div class="length">
+                            <p>8</p>
+                        </div>
+                    </div>
+                    <div class="slid-bar">
+                        <input
+                            type="range"
+                            min="4"
+                            max="24"
+                            value="8"
+                            step="4"
+                            class="slider"
+                            id="range"
+                        />
+                    </div>
+                </div>
+
+                <div class="checkboxes">
+                    <div class="check flex">
+                        <label class="form-control">
+                            <input
+                                id="upperCase"
+                                type="checkbox"
+                                name="checkbox"
+                            />
+                        </label>
+                        <p>Include Uppercase Letters</p>
+                    </div>
+                    <div class="check flex">
+                        <label class="form-control">
+                            <input
+                                id="lowerCase"
+                                type="checkbox"
+                                name="checkbox"
+                            />
+                        </label>
+                        <p>Include Lowercase Letters</p>
+                    </div>
+                    <div class="check flex">
+                        <label class="form-control">
+                            <input
+                                id="numbers"
+                                type="checkbox"
+                                name="checkbox"
+                            />
+                        </label>
+                        <p>Include Numbers</p>
+                    </div>
+                    <div class="check flex">
+                        <label class="form-control">
+                            <input
+                                id="specialChars"
+                                type="checkbox"
+                                name="checkbox"
+                            />
+                        </label>
+                        <p>Include Symbols</p>
+                    </div>
+                </div>
+
+                <div class="strength flex">
+                    <p>STRENGTH</p>
+
+                    <div class="bars flex">
+                        <p class="tag" id="strength"></p>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
+                </div>
+
+                <button id="generator" class="genBtn flex">
+                    GENERATE
+                    <svg
+                        width="12"
+                        height="12"
+                        xmlns="http://www.w3.org/2000/svg"
+                    >
+                        <path
+                            fill="#24232C"
+                            d="m5.106 12 6-6-6-6-1.265 1.265 3.841 3.84H.001v1.79h7.681l-3.841 3.84z"
+                        />
+                    </svg>
+                </button>
+            </div>
+        </main>
+        <!-- Footer -->
+        <footer class="attribution">
+            made with &#128151; by
+
+            <a
+                target="_blank"
+                class="impoText"
+                href="https://github.com/R4nn3r"
+            >
+                <i class="fa-brands fa-github-alt"></i>
+            </a>
+        </footer>
+        <script src="apps/js/zxcvbn.js"></script>
+        <script src="apps/js/main.js"></script>
+    </body>
+</html>
